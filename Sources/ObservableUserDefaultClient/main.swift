@@ -41,6 +41,6 @@ import ObservableUserDefault
 }
 
 fileprivate extension UserDefaults {
-    static let shared = UserDefaults(suiteName: "SHARED_SUITE_EXAMPLE")!
-    static var name: String = "John Appleseed"
+    nonisolated(unsafe) static let shared = UserDefaults(suiteName: "SHARED_SUITE_EXAMPLE")!
+    nonisolated(unsafe) static var name: String = "John Appleseed"
 }
